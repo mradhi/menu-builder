@@ -16,6 +16,11 @@ class Item
     protected $options;
 
     /**
+     * @var array
+     */
+    protected $routes;
+
+    /**
      * Item constructor.
      *
      * @param string $name
@@ -74,7 +79,11 @@ class Item
      */
     public function getRoutes(): array
     {
-        return $this->getOption('routes', []);
+        if (null === $this->routes) {
+            $this->routes = $this->getOption('routes', []);
+        }
+
+        return $this->routes;
     }
 
     /**
