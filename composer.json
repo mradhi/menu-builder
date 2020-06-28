@@ -1,0 +1,22 @@
+{
+    "name": "usyme/menu-builder",
+    "type": "library",
+    "description": "Menu builder for PHP",
+    "keywords": ["builder", "menu"],
+    "require": {
+        "php": "^7.2",
+        "twig/twig": "^3.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Usyme\\MenuBuilder\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mohamed Radhi Guennichi",
+            "email": "rg@mate.tn"
+        }
+    ]
+}
