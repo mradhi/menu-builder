@@ -33,11 +33,15 @@ class Menu
     }
 
     /**
+     * @param string $group
+     *
      * @return Item[]
      */
-    public function getItems(): array
+    public function getItems(string $group = 'default'): array
     {
-        return $this->items;
+        return array_filter($this->items, function (Item $item) use ($group) {
+            return $item->belongsTo($group);
+        });
     }
 
     /**

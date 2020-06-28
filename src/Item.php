@@ -123,6 +123,24 @@ class Item
     }
 
     /**
+     * @param string $group
+     *
+     * @return bool
+     */
+    public function belongsTo(string $group): bool
+    {
+        return $group === $this->getGroup();
+    }
+
+    /**
+     * @return string
+     */
+    public function getGroup(): string
+    {
+        return $this->getOption('group', 'default');
+    }
+
+    /**
      * @param string $key
      * @param        $default
      *
